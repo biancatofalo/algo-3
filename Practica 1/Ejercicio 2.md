@@ -1,0 +1,88 @@
+### Ejercicio 2
+## a) 
+${(n^2)}^{n^2}$ si no se descartan cuadrados con repetidos. 
+
+$n^{2}!$ si se descartan cuadrados con repetidos. 
+
+## b) 
+Idea: tengo un vector de $n^2$ elementos en el que la posición i indica si el elemento i+1 ya está o no en el cuadrado. 
+#include <iostream>
+#include <vector>
+#include <math.h>
+
+using namespace std;
+int N;
+int cantidad;
+//¿Cual es la diferencia de ponerlas ahi o en el main? N y esta y cantidad
+
+bool es_cuadrado_magico(vector<vector<int>>& cuadrado) {
+    int valorPrimeraFila=0;
+    for (int i=0; i<N; i++) {
+        valorPrimeraFila += cuadrado[0][i];
+    }
+    //Sumo cada columna y veo si tiene el mismo valor que la primera fila:
+    for (int j=0; j<N; j++) {
+        int sumaColumna=0;
+        for (int i=0; i<N; i++) {
+            sumaColumna += cuadrado[i][j];
+        }
+        if (sumaColumna!=valorPrimeraFila) {
+            return false;
+        }
+    }
+    //Sumo cada fila y veo si tiene el mismo valor que la primera fila:
+    for (int i=0; i<N; i++) {
+        int sumaFila=0;
+        for (int j=0; j<N; j++) {
+            sumaFila += cuadrado[i][j];
+        }
+        if (sumaFila!=valorPrimeraFila) {
+            return false;
+        }
+    }
+    //Sumo cada diagonal y veo si tiene el mismo valor que la primera fila:
+    int sumaDiagonal1=0;
+    for (int i=0; i<N; i++) {
+        sumaDiagonal1 += cuadrado[i][i];
+    }
+    if (sumaDiagonal1!=valorPrimeraFila) {
+        return false;
+    }
+
+    int sumaDiagonal2=0;
+    for (int i=0; i<N; i++) {
+        sumaDiagonal2 += cuadrado[i][cuadrado.size()-1-i];
+    }
+    if (sumaDiagonal2!=valorPrimeraFila) {
+        return false;
+    }
+    return true;
+}
+
+void contar_cuadrados(int j, int i, int N, vector<int>& esta, vector<vector<int>>& cuadrado_parcial) {
+    if (i==N && es_cuadrado_magico(cuadrado_parcial)) {
+        cantidad++;
+        return;
+    }
+    int sig_j = j==N-1 ? 0 : j+1;
+    int sig_i = (sig_j==0) ? i+1 : i;
+    for (int h=0; h<esta.size(); h++) {
+        if (esta[h]==0) {
+            cuadrado_parcial[i][j] = h+1;
+            esta[h]=1;
+            contar_cuadrados(sig_j, sig_i, N, esta, cuadrado_parcial);
+            esta[h]=0;
+            cuadrado_parcial[i][j] = -1;
+        }
+    }
+}
+
+int main() {
+    cin >> N;
+    vector<int> esta(pow(N,2),0);
+    vector<vector<int>> cuadrado_parcial(N,vector<int>(N,-1));
+    cantidad=0;
+    contar_cuadrados(0,0,N,esta, cuadrado_parcial);
+    cout << "La cantidad de cuadrados magicos de orden " << N << " es: " << cantidad;
+    return 0;
+}
