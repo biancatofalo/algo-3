@@ -99,7 +99,7 @@ costo de cada nodo = $n^2$ de chequear si es mágico, y $n^2$ si no es el caso b
 Entonces la complejidad temporal es $O((n^2)!n^2)$
 
 ## c) 
-Intuitivamente, la primera posición tiene $n^2$ opciones, la segunda $n^2-1$, ..., la n-esima 1 opcion $\rightarrow O(n^2(n^2-1)...1)=O((n^2)!)
+Intuitivamente, la primera posición tiene $n^2$ opciones, la segunda $n^2-1$, ..., la n-esima 1 opcion $\rightarrow O(n^2(n^2-1)...1)=O((n^2)!)$
 
 ## d) 
 Idea: Tengo un parámetro que es un vector N, el cual indica en la posición i la suma de la fila i, y otro que indica en la posición j la suma de la columna j. 
