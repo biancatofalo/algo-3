@@ -23,8 +23,11 @@ pair<int,int> traga_monedas (vector<int>&b, int i, int j) {
     if (j<=0) {
         return make_pair(0,0);
     }
-    pair<int,int> con_billete_i = traga_monedas(b, i-1, j-b[i]);
+    int iesimo=b[i];
+    b.pop_back();
+    pair<int,int> con_billete_i = traga_monedas(b, i-1, j-iesimo);
     pair<int,int> sin_billete_i = traga_monedas(b, i-1, j);
+    b.push_back(iesimo);
 
     int sumaBillettes;
     int cantBilletes;
@@ -40,7 +43,6 @@ pair<int,int> traga_monedas (vector<int>&b, int i, int j) {
     return make_pair(sin_billete_i.first, sin_billete_i.second);
 }
 
-
 int main() {
     int cant;
     cin >> cant;
@@ -48,7 +50,7 @@ int main() {
     for (int i=0; i<cant; i++) {
         int elem;
         cin >> elem;
-        b.push_back(elem);
+        billetes.push_back(elem);
     }
     int costo;
     cin >> costo;
@@ -57,7 +59,7 @@ int main() {
     return 0;
 }
 ```
-La complejidad temporal de este algoritmo es la cantidad de nodos posibles * costo de cada nodo = $2^{n} * O(1)$ = $O(2^{n})$ 
+La complejidad temporal de este algoritmo es la cantidad de nodos posibles * costo de cada nodo = $2^{n} * O(n)$ = $O(2^{n}*n)$. El costo de cada nodo es O(n) por el push_bak(iesimo) (que se podría evitar facilmente ya que no hace falta quitar y agregar elementos porque tenemos el indice i pero creo que el ejercicio apuntaba a eso ya que en el c) aclara explicitamente que no modifiquemos b). 
 
 ## c) 
 ```cpp
@@ -111,4 +113,6 @@ int main() {
     return 0;
 }
 ```
-
+cc'_B_ tiene superposición de problemas si la cantidad de estados es mucho menor a la cantidad de llamados recursivos. O sea, si 
+$NP<< 2^{N} \leftrightarrow P<<2^{N}/N$
+con N=|B|. 
