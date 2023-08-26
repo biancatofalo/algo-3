@@ -89,7 +89,7 @@ int main() {
 }
 ```
 Arbol de backtracking: 
-![imagen2b](/Practica%201/images/backtracking_2b.png)
+![imagen2b](/Practica%201/images/backtracking_2b.png) 
 
 Complejidad: 
 #nodos = $n^2!$
