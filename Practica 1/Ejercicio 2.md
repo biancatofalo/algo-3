@@ -201,6 +201,6 @@ int main() {
 Esta poda se podría mejorar si tambien se chequea que las diagonales no superen el número mágico. Además, cada vez que termina una fila podría compararla con el valor de la primera fila (y si ya no son iguales, descartar esa rama porque alguna (o ambas) no suman el número mágico)). 
 
 ## e) 
-$n^2(n^2+1)/2 = nM \rightleftarrow M = n^2(n^2+1)/2n = (n^4+n^2)/2n = (n^3+n)/2$
+$n^2(n^2+1)/2 = nM \leftrightarrow M = n^2(n^2+1)/2n = (n^4+n^2)/2n = (n^3+n)/2$
 
 Esto se podría aprovechar verificando cada vez que completo una fila/columna si suma el número mágico. 
