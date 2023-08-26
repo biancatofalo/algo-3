@@ -60,6 +60,7 @@ int main() {
 }
 ```
 La complejidad temporal de este algoritmo es la cantidad de nodos posibles * costo de cada nodo = $2^{n} * O(n)$ = $O(2^{n}*n)$. El costo de cada nodo es O(n) por el push_bak(iesimo) (que se podría evitar facilmente ya que no hace falta quitar y agregar elementos porque tenemos el indice i pero creo que el ejercicio apuntaba a eso ya que en el c) aclara explicitamente que no modifiquemos b). 
+La idea de hacerlo primero asi es ver que en vez de hacer esto podrias hacer lo del c), que es tener parametros numericos que representan un estado del problema, y poder memorizar con eso. 
 
 ## c) 
 ```cpp
@@ -116,3 +117,7 @@ int main() {
 cc'_B_ tiene superposición de problemas si la cantidad de estados es mucho menor a la cantidad de llamados recursivos. O sea, si 
 $NP<< 2^{N} \leftrightarrow P<<2^{N}/N$
 con N=|B|. 
+
+d) La idea sería tener una matriz de N*P. 
+
+e) 
