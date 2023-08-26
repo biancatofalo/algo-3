@@ -90,6 +90,11 @@ Entonces #nodos = $O(2^n)$
 
 Costo de cada nodo: el caso base es $O(k^2+k)$ porque copio la solución parcial, y calculo la suma rara. el costo de los nodos internos es constante. 
 Complejidad = $O((k^2+k)*2^n) = O(k^{2}2^{n})$ . 
+# Complejidad espacial: 
+$O(k+k)=O(k)$, por el costo de tener la mejor solucion y la solucion parcial almacenadas. 
+
+## c) 
+Podriamos podar si con los elementos restantes no se pudiera llegar al máximo (aunque esto sería costoso de calcular). 
 
 ## Preguntas
 a) Soluciones candidatas son conjuntos de k elementos o de cualquier cantidad de elementos? 
