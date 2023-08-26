@@ -5,7 +5,7 @@ av(P, c, j) =
 \begin{cases}
      indefinido & \text{si } c < 0 \lor j < c \\
      0 & \text{si } j < 0 \\
-     max(av(P, j-1, c+1) + P[j], av(P, j-1, c-1) - P[j], av(P, j-1, c)) & \text{caso contrario}
+     max(av(P, c+1, j-1) + P[j], av(P, c-1, j-1) - P[j], av(P, c, j-1)) & \text{caso contrario}
 \end{cases}
 $$
 
