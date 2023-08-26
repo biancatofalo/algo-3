@@ -99,3 +99,4 @@ Podriamos podar si con los elementos restantes no se pudiera llegar al máximo (
 ## Preguntas
 a) Soluciones candidatas son conjuntos de k elementos o de cualquier cantidad de elementos? 
 Complejidad temporal ?? la sumatoria como se q es 2^n? o miro solo la cantidad de hojas? 
+Los parametros q entran del main cuentan en la complejidad espacial? No. 
