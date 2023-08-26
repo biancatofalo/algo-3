@@ -124,3 +124,6 @@ int main() {
     return 0;
 }
 ```
+### Preguntas
+# g) 
+La diferencia entre arbol de recursion y de backtracking es...? 
