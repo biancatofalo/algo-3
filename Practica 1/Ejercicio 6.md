@@ -37,7 +37,7 @@ pair<int,int> traga_monedas (vector<int>&b, int i, int j) {
     int sumaBillettes;
     int cantBilletes;
     if (con_billete_i.first+b[i] == sin_billete_i.first) {
-        if (con_billete_i.second < sin_billete_i.second) {
+        if (con_billete_i.second+1 < sin_billete_i.second) {
             return make_pair(con_billete_i.first+b[i], con_billete_i.second+1);
         }
         return make_pair(sin_billete_i.first, sin_billete_i.second);
@@ -92,7 +92,7 @@ pair<int,int> traga_monedas (int i, int j) {
     int sumaBillettes;
     int cantBilletes;
     if (con_billete_i.first+b[i] == sin_billete_i.first) {
-        if (con_billete_i.second < sin_billete_i.second) {
+        if (con_billete_i.second+1 < sin_billete_i.second) {
             return make_pair(con_billete_i.first+b[i], con_billete_i.second+1);
         }
         return make_pair(sin_billete_i.first, sin_billete_i.second);
@@ -151,7 +151,7 @@ pair<int,int> traga_monedas (int i, int j) {
     pair<int,int> con_billete_i = traga_monedas(i-1,j-b[i]);
     pair<int,int> sin_billete_i = traga_monedas(i-1, j);
     if (con_billete_i.first+b[i] == sin_billete_i.first) {
-        if (con_billete_i.second < sin_billete_i.second) {
+        if (con_billete_i.second+1 < sin_billete_i.second) {
             memo[i][j] = make_pair(con_billete_i.first+b[i], con_billete_i.second+1);
         } else {
             memo[i][j] = make_pair(sin_billete_i.first, sin_billete_i.second);
