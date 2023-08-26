@@ -180,3 +180,6 @@ int main() {
 }
 
 ## f)
+La llamada que resuelve el problema es traga_monedas(|B|-1, c). 
+La nueva complejidad se calcula como la cantidad de estados posibles * complejidad de calcular cada estado. 
+Complejidad = O(N*P*1) = O(NP)
