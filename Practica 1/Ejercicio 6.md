@@ -127,6 +127,7 @@ con N=|B|.
 La idea sería tener una matriz de N*P posiciones. 
 
 ## e) 
+```cpp
 #include <iostream>
 #include <vector>
 
@@ -178,6 +179,7 @@ int main() {
     cout << res.first << ", " << res.second;
     return 0;
 }
+```
 
 ## f)
 La llamada que resuelve el problema es traga_monedas(|B|-1, c). 
