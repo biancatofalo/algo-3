@@ -6,6 +6,7 @@ $n^{2}!$ si se descartan cuadrados con repetidos.
 
 ## b) 
 Idea: tengo un vector de $n^2$ elementos en el que la posición i indica si el elemento i+1 ya está o no en el cuadrado. 
+```cpp
 #include <iostream>
 #include <vector>
 #include <math.h>
@@ -86,3 +87,11 @@ int main() {
     cout << "La cantidad de cuadrados magicos de orden " << N << " es: " << cantidad;
     return 0;
 }
+```
+Arbol de backtracking: 
+![imagen2b](Practica%201/images/backtracking_2b.png)
+
+Complejidad: 
+#nodos = $n^2!$
+costo de cada nodo = $n^2$ de chequear si es mágico, y $n^2$ si no es el caso base 
+Entonces la complejidad temporal es $O((n^2)!*n^2)$
