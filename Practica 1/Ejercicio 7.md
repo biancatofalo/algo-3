@@ -10,6 +10,6 @@ av(P, c, j) =
 $$
 
 ## c) 
-El dato que es respuesta al problema es av(P, 0, |P|) (quiero ver cual es la maxima ganancia, si al finalizar el ultimo día tengo 0 asteroides). 
+El dato que es respuesta al problema es av(P, 0, |P|-1) (quiero ver cual es la maxima ganancia, si al finalizar el ultimo día tengo 0 asteroides). (Obs: el dia 1 es j=0, y el ultimo dia es j=|P|-1)). 
 
 ## d) 
