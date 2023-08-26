@@ -13,3 +13,33 @@ $$
 El dato que es respuesta al problema es av(P, 0, |P|-1) (quiero ver cual es la maxima ganancia, si al finalizar el ultimo día tengo 0 asteroides). (Obs: el dia 1 es j=0, y el ultimo dia es j=|P|-1)). 
 
 ## d) 
+```cpp
+#include <iostream>
+#include <vector>
+
+using namespace std;
+//Dejo a P como parametro fijo para no modificarlo en cada paso y no generar mas estados
+
+
+int max_ganancia(vector<int>& precios, int i, int j) {
+    if (i<0 || j<i) {
+        return -1;
+    }
+    if (j<0) {
+         
+    }
+}
+
+int main() {
+    int dias;
+    cin >> dias;
+    vector<int> precios(dias);
+    for(int i=0; i<dias; i++) {
+        int elem;
+        cin >> elem;
+        precios.push_back(elem);
+    }
+    cout << "La maxima ganancia es" << max_ganancia(precios, 0, precios.size());
+    return 0;
+}
+```
