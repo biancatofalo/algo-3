@@ -15,9 +15,9 @@
 La idea es devolver V si hay un subconjunto de C que sume k. Entonces, la función ve si hay alguna sin el último que sume k, o si hay alguno con el último que sume k (viendo si hay alguno sin el último que sume k-último). 
 
 ## f) 
-#nodos= $$\sum_{i=0}^{n} 2^{i}\$$
-Costo de cada nodo: constante 
-Complejidad=O(n)
+#nodos = $$\sum_{i=0}^{n} 2^{i}\$$
+Costo de cada nodo: constante.  
+Complejidad = O(2^{n})
 
 ## g) 
-
+![imagen1](/Practica%201/images/backtracking_1g.png) 
