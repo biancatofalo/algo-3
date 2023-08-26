@@ -18,16 +18,25 @@ El dato que es respuesta al problema es av(P, 0, |P|-1) (quiero ver cual es la m
 #include <vector>
 
 using namespace std;
-//Dejo a P como parametro fijo para no modificarlo en cada paso y no generar mas estados
+//Dejo a P como parametro fijo para no modificarlo en cada paso y no generar mas estados.
+vector<vector<int>> memo;
 
+int maximo(int a, int b, int c) {
+    return max(a,max(b,c));
+}
 
 int max_ganancia(vector<int>& precios, int i, int j) {
     if (i<0 || j<i) {
         return -1;
     }
     if (j<0) {
-         
+        return 0;
     }
+    if (memo[i][j] != -2) {
+        return memo[i][j];
+    }
+    memo[i][j]=maximo(max_ganancia(precios,i+1,j-1)+precios[j], max_ganancia(precios,i-1,j-1)-precios[j], max_ganancia(precios,i,j-1));
+    return memo[i][j];
 }
 
 int main() {
@@ -39,7 +48,8 @@ int main() {
         cin >> elem;
         precios.push_back(elem);
     }
-    cout << "La maxima ganancia es" << max_ganancia(precios, 0, precios.size());
+    memo.resize(dias, vector<int>(dias, -2));
+    cout << "La maxima ganancia es" << max_ganancia(precios, 0, precios.size()-1);
     return 0;
 }
 ```
