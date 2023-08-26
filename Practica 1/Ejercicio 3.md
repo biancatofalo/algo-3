@@ -1,4 +1,4 @@
-### Ejercicio 3
+# Ejercicio 3
 ## a)
 Idea: Voy generando conjuntos de k elementos, y quedandome con el que maximiza la suma. 
 Las soluciones candidatas son los subconjuntos de k elementos de {1,..,n}. 
@@ -84,13 +84,13 @@ Con este algoritmo, se podan ramas que se pasan de la longitud deaseada. Otra po
 Observación: la matriz era simétrica, capaz cambia algo. 
 
 ## b) 
-# Complejidad temporal: 
+### Complejidad temporal: 
 #nodos = #subconjuntos de tamaño menor o igual a k = $$\sum_{i=0}^{k} \binom{n}{i}$$
 Entonces #nodos = $O(2^n)$
 
 Costo de cada nodo: el caso base es $O(k^2+k)$ porque copio la solución parcial, y calculo la suma rara. el costo de los nodos internos es constante. 
 Complejidad = $O((k^2+k)*2^n) = O(k^{2}2^{n})$ . 
-# Complejidad espacial: 
+### Complejidad espacial: 
 $O(k+k)=O(k)$, por el costo de tener la mejor solucion y la solucion parcial almacenadas. 
 
 ## c) 
