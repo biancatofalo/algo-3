@@ -1,8 +1,13 @@
-### Ejercicio 2
+### Ejercicio 6
 ## a) 
-* (infinito, infinito) si i=|B| ^ j>0
-* (0,0) si j<0
-* min(cc({b2,...,bn}, c-b1).first+b1, cc({b2,...,bn}, c-b1).second+1), (cc({b2,...,bn}, c-b1).first, cc({b2,...,bn}, c-b1).second)))
+$$
+cc(B,c) = 
+\begin{cases}
+    (\infty, \infty) \\ \\ \\ \\ \\ \\ \\ \\ \\  \text{si } i=|B| \land j>0\\
+    (0,0) \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\  \text{si } j\leq 0\\
+    min(min(cc({b2,...,bn}, c-b1).first+b1, cc({b2,...,bn}, c-b1).second+1), (cc({b2,...,bn}, c-b1).first, cc({b2,...,bn}, c-b1).second))) \text{caso contrario}
+\end{cases}
+$$
 
 ## b) 
 ```cpp
@@ -118,6 +123,60 @@ cc'_B_ tiene superposición de problemas si la cantidad de estados es mucho meno
 $NP<< 2^{N} \leftrightarrow P<<2^{N}/N$
 con N=|B|. 
 
-d) La idea sería tener una matriz de N*P. 
+## d) 
+La idea sería tener una matriz de N*P posiciones. 
 
-e) 
+## e) 
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int infinito=1e9;
+vector<int> b(0);
+vector<vector<pair<int,int>>> memo;
+
+//i=indice que veo; j=precio restante.
+pair<int,int> traga_monedas (int i, int j) {
+    if (i<0 && j>0) {
+        return make_pair(infinito, infinito);
+    }
+    if (j<=0) {
+        return make_pair(0,0);
+    }
+    if (memo[i][j].first != -1 || memo[i][j].second != -1) {
+        return memo[i][j];
+    }
+    pair<int,int> con_billete_i = traga_monedas(i-1,j-b[i]);
+    pair<int,int> sin_billete_i = traga_monedas(i-1, j);
+    if (con_billete_i.first+b[i] == sin_billete_i.first) {
+        if (con_billete_i.second < sin_billete_i.second) {
+            memo[i][j] = make_pair(con_billete_i.first+b[i], con_billete_i.second+1);
+        } else {
+            memo[i][j] = make_pair(sin_billete_i.first, sin_billete_i.second);
+        }
+    } else if ((con_billete_i.first+b[i] < sin_billete_i.first)) {
+        memo[i][j] = make_pair(con_billete_i.first+b[i], con_billete_i.second+1);
+    } else {
+        memo[i][j] = make_pair(sin_billete_i.first, sin_billete_i.second);
+    }
+    return memo[i][j];
+}
+
+int main() {
+    int cant;
+    cin >> cant;
+    for (int i=0; i<cant; i++) {
+        int elem;
+        cin >> elem;
+        b.push_back(elem);
+    }
+    int costo;
+    cin >> costo;
+    memo.resize(cant, vector<pair<int,int>>(costo+1, make_pair(-1,-1)));
+    pair<int, int> res = traga_monedas(b.size()-1, costo);
+    cout << res.first << ", " << res.second;
+    return 0;
+}
+
+## f)
