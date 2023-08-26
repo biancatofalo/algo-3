@@ -43,3 +43,4 @@ int main() {
     return 0;
 }
 ```
+El parámetro i va desde 0 a la cantidad de días (|P|) como mucho. El parámetro j va del ultimo (j=|P|-1) al primer día (j=0) (cuando j<0, no mira memo, sino que es el caso base). 
