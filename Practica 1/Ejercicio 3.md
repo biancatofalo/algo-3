@@ -85,9 +85,11 @@ Observación: la matriz era simétrica, capaz cambia algo.
 
 ## b) 
 # Complejidad temporal: 
-#nodos = #subconjuntos de tamaño menor o igual a k = $$\sum_{i=0}^{k} \binom{n}{i}$$. Entonces #nodos = $O(2^n)$
-costo de cada nodo: el caso base es $O(k^2+k)$ porque copio la solución parcial, y calculo la suma rara. el costo de los nodos internos es constante. 
-Complejidad = $O((k^2+k)*2^n)$ . 
+#nodos = #subconjuntos de tamaño menor o igual a k = $$\sum_{i=0}^{k} \binom{n}{i}$$
+Entonces #nodos = $O(2^n)$
+
+Costo de cada nodo: el caso base es $O(k^2+k)$ porque copio la solución parcial, y calculo la suma rara. el costo de los nodos internos es constante. 
+Complejidad = $O((k^2+k)*2^n) = O(k^{2}2^{n})$ . 
 
 ## Preguntas
 a) Soluciones candidatas son conjuntos de k elementos o de cualquier cantidad de elementos? 
