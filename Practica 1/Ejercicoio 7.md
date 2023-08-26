@@ -1,5 +1,5 @@
 # Ejercicio 7 
-## a) 
+## b) 
 $$
 av(P, c, j) =
 \begin{cases}
@@ -9,4 +9,7 @@ av(P, c, j) =
 \end{cases}
 $$
 
+## c) 
+El dato que es respuesta al problema es av(P, 0, |P|) (quiero ver cual es la maxima ganancia, si al finalizar el ultimo día tengo 0 asteroides). 
 
+## d) 
