@@ -2,10 +2,24 @@
 #include <vector>
 
 using namespace std;
-
-int min_costo() {
+int infinito=1e9;
+//Version sin DP:
+int min_costo(vector<int>& cortes, int a, int b, int i, int j) {
+    if (b<a) { //revisar esta condicion
+        return 0;
+    }
+    int minimo=infinito;
     
+    while() {
+        int costo = min_costo() + min_costo(); 
+        if (costo<minimo) {
+            minimo=costo; 
+        }
+    }
+    return j-i+minimo;
 }
+
+//Version con DP
 
 int main() {
     int cantCortes;
@@ -14,8 +28,11 @@ int main() {
     for (int i=0; i<cantCortes; i++) {
         int elem;
         cin >> elem;
-        cortes[i]=elem; 
+        cortes[i]=elem;
     }
-    cout << "El menor costo para hacer los cortes es " << min_costo(); 
-    return 0; 
+    int longitud;
+    cin >> longitud;
+    cout << "El menor costo para hacer los cortes es " << min_costo(cortes,0, cantCortes-1, 0, longitud);
+    return 0;
 }
+
