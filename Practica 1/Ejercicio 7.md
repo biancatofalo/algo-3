@@ -20,14 +20,16 @@ El dato que es respuesta al problema es av(P, 0, |P|-1) (quiero ver cual es la m
 using namespace std;
 //Dejo a P como parametro fijo para no modificarlo en cada paso y no generar mas estados.
 vector<vector<int>> memo;
+int infinito=1e9;
 
 int maximo(int a, int b, int c) {
     return max(a,max(b,c));
 }
 
+// i=asteroides final del dia j; j=dia.
 int max_ganancia(vector<int>& precios, int i, int j) {
-    if (i<0 || j<i) {
-        return -1;
+    if (i<0 || (j+1<i && i>0)) {
+        return -infinito;
     }
     if (j<0) {
         return 0;
@@ -46,10 +48,10 @@ int main() {
     for(int i=0; i<dias; i++) {
         int elem;
         cin >> elem;
-        precios.push_back(elem);
+        precios[i]=elem;
     }
     memo.resize(dias, vector<int>(dias, -2));
-    cout << "La maxima ganancia es" << max_ganancia(precios, 0, precios.size()-1);
+    cout << "La maxima ganancia es " << max_ganancia(precios, 0, precios.size()-1);
     return 0;
 }
 ```
