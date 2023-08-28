@@ -1,6 +1,5 @@
 # Ejercicio 8
 ## b) 
-
 $$
 min_costo({k_{0},...,k_{n-1}, i, j) =
 \begin{cases}
