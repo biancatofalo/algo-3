@@ -11,7 +11,7 @@ $$
 Los parametros son (cortes, 0, longitud) 
 
 ## c) 
-Version top-down: 
+Version top-down: está mal, lo hice considerando que C estaba ordenado.  
 ```cpp
 #include <iostream>
 #include <vector>
