@@ -5,7 +5,7 @@ $$
 min_costo({k_{0},...,k_{n-1}, i, j) =
 \begin{cases}
      0 & \text{si } |c| < 0 
-     j-i+min_{k_{i} \in C / 0<=i<n}(min_costo({k_{0},...,k_{i-1}, i, k_{i}))+min_costo({k_{i+1},...,k_{n-1}, k_{i}, j)){caso contrario}
+     j-i+min_{k_{i} \in C / 0<=i<n}(min_costo({k_{0},...,k_{i-1}, i, k_{i}))+min_costo({k_{i+1},...,k_{n-1}, k_{i}, j)) & \text{caso contrario}
 \end{cases}
 $$
 
