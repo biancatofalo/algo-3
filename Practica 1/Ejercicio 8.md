@@ -74,4 +74,4 @@ int main() {
 ## Preguntas
 Cual seria el tamaño de la matriz? 
 Esta bien esto?: 
-a va de 0 a cantCortes-1, b tambien i va de 0 a l y j tambien. 
+a va de 0 a cantCortes-1, b tambien i va de 0 a l y j tambien, pero los casos en que a<b no los uso ?? armo la matriz asi igual? Lo mismo con i y j, i siempre es menor que j. 
