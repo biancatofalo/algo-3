@@ -1,3 +1,15 @@
+# Ejercicio 8
+## b) 
+
+$$
+min_costo({k_{0},...,k_{n-1}, i. j) =
+\begin{cases}
+     0 & \text{si } |c| < 0 
+     {caso contrario}
+\end{cases}
+$$
+
+## c) 
 ```cpp
 #include <iostream>
 #include <vector>
