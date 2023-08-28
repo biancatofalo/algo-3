@@ -10,11 +10,11 @@ int min_costo(vector<int>& cortes, int a, int b, int i, int j) {
         return 0;
     }
     int minimo=infinito;
-    
+
     while() {
-        int costo = min_costo() + min_costo(); 
+        int costo = min_costo() + min_costo();
         if (costo<minimo) {
-            minimo=costo; 
+            minimo=costo;
         }
     }
     return j-i+minimo;
