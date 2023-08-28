@@ -77,6 +77,72 @@ int main() {
 }
 ```
 
+#include <iostream>
+#include <vector>
+
+using namespace std;
+int infinito=1e9;
+/*
+//Version sin DP:
+int min_costo(vector<int>& cortes, int a, int b, int i, int j) {
+    if (b<a) { //revisar esta condicion
+        return 0;
+    }
+    int minimo=infinito;
+    int k0=a;
+    while(k0!=b+1) {
+        int costo = min_costo(cortes, a, k0-1, i, cortes[k0]) + min_costo(cortes, k0+1,b,cortes[k0],j);
+        if (costo<minimo) {
+            minimo=costo;
+        }
+        k0++;
+    }
+    return j-i+minimo;
+}
+*/
+
+//Version con DP:
+vector<vector<vector<vector<int>>>> memo;
+
+int min_costo_DP(vector<int>& cortes, int a, int b, int i, int j) {
+    if (b<a) {
+        return 0;
+    }
+    if (memo[a][b][i][j]!=-1) {
+        return memo[a][b][i][j];
+    }
+    int minimo=0;
+    int k0=a;
+    while(k0!=b+1) {
+        if (i<cortes[k0]<j) {
+            int costo = min_costo_DP(cortes, a, k0-1, i, cortes[k0]) + min_costo_DP(cortes, k0+1,b,cortes[k0],j);
+            if (costo<minimo || minimo==0) {
+                minimo=costo;
+            }
+        }
+        k0++;
+    }
+    memo[a][b][i][j] = j-i+minimo;
+    return memo[a][b][i][j];
+}
+
+int main() {
+    int cantCortes;
+    cin >> cantCortes;
+    vector<int> cortes(cantCortes);
+    for (int i=0; i<cantCortes; i++) {
+        int elem;
+        cin >> elem;
+        cortes[i]=elem;
+    }
+    int longitud;
+    cin >> longitud;
+    memo.resize(cantCortes, vector<vector<vector<int>>>(cantCortes, vector<vector<int>>(longitud+1,vector<int>(longitud+1, -1))));
+    cout << "El menor costo para hacer los cortes es " << min_costo_DP(cortes,0, cantCortes-1, 0, longitud);
+    return 0;
+}
+
+
 ## Preguntas
 Cual seria el tamaño de la matriz? 
 Esta bien esto?: 
