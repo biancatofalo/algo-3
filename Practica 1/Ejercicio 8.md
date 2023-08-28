@@ -11,29 +11,49 @@ $$
 Los parametros son (cortes, 0, longitud) 
 
 ## c) 
+Version top-down: 
 ```cpp
 #include <iostream>
 #include <vector>
 
 using namespace std;
 int infinito=1e9;
+/*
 //Version sin DP:
 int min_costo(vector<int>& cortes, int a, int b, int i, int j) {
     if (b<a) { //revisar esta condicion
         return 0;
     }
     int minimo=infinito;
-
-    while() {
-        int costo = min_costo() + min_costo();
+    int k0=a; 
+    while(k0!=b+1) {
+        int costo = min_costo(cortes, a, k0-1, i, cortes[k0]) + min_costo(cortes, k0+1,b,cortes[k0],j); 
         if (costo<minimo) {
             minimo=costo;
         }
+        k0++; 
     }
     return j-i+minimo;
 }
+*/
 
-//Version con DP
+//Version con DP: 
+
+int min_costo_DP(vector<int>& cortes, int a, int b, int i, int j) {
+    if (b<a) { //revisar esta condicion
+        return 0;
+    }
+    int minimo=infinito;
+    int k0=a; 
+    while(k0!=b+1) {
+        int costo = min_costo(cortes, a, k0-1, i, cortes[k0]) + min_costo(cortes, k0+1,b,cortes[k0],j); 
+        if (costo<minimo) {
+            minimo=costo;
+        }
+        k0++; 
+    }
+    return j-i+minimo;
+}
 
 int main() {
     int cantCortes;
@@ -49,4 +69,5 @@ int main() {
     cout << "El menor costo para hacer los cortes es " << min_costo(cortes,0, cantCortes-1, 0, longitud);
     return 0;
 }
+```
 ```
