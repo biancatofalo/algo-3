@@ -70,4 +70,8 @@ int main() {
     return 0;
 }
 ```
-```
+
+## Preguntas
+Cual seria el tamaño de la matriz? 
+Esta bien esto?: 
+a va de 0 a cantCortes-1, b tambien i va de 0 a l y j tambien. 
