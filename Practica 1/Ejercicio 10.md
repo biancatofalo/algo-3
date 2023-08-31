@@ -13,4 +13,5 @@ $$
 
 El llamado que resuelve el problema es f(sumaSoportes, 0) 
 
-##
+## Preguntas
+Le puedo pasar infinito como parametro? Ya sea en la formulacion como en el codigo. 
