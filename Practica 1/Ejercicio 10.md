@@ -15,7 +15,7 @@ El llamado que resuelve el problema es f(sumaSoportes, 0)
 
 
 ## c) 
-
+```cpp
 #include <iostream>
 #include <vector>
 
@@ -63,7 +63,7 @@ int main() {
     cout << "La maxima cantidad de cajas apilable es " << apilar_cajas(sumaSoportes, 0);
     return 0;
 }
-
+```
 
 ## Preguntas
 Le puedo pasar infinito como parametro? Ya sea en la formulacion como en el codigo. 
