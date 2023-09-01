@@ -19,7 +19,7 @@ El llamado que resuelve el problema es f(sumaSoportes, 0)
 #include <iostream>
 #include <vector>
 
-using namespace std;
+/* using namespace std;
 
 int sumaSoportes=0;
 vector<int> soportes;
@@ -63,6 +63,14 @@ int main() {
     cout << "La maxima cantidad de cajas apilable es " << apilar_cajas(sumaSoportes, 0);
     return 0;
 }
+
+pesos = [1,2,4,6,3]
+soportes = [1,5,5,7,9]
+
+ */
+
+
+
 ```
 
 ## Preguntas
