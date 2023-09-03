@@ -28,4 +28,4 @@ Caso base: h=1
       
 Paso inductivo: quiero ver que si $$\sum_{i=1}^{k} IN_{i} \leq \sum_{i=1}^{k} OUT_{i}$$ entonces $$\sum_{i=1}^{k+1} IN_{i} \leq \sum_{i=1}^{k+1} OUT_{i}$$
 
-      $$\sum_{i=1}^{k} IN_{i} \leq \sum_{i=1}^{k} OUT_{i} \rightarrow \sum_{i=1}^{k} IN_{i} + IN_{k+1} \leq \sum_{i=1}^{k} OUT_{i} + IN_{k+1} \leq \sum_{i=1}^{k} OUT_{i} + OUT_{k+1} \rightarrow \sum_{i=1}^{k+1} IN_{i}  \leq \sum_{i=1}^{k+1} OUT_{i} 
+$$\sum_{i=1}^{k} IN_{i} \leq \sum_{i=1}^{k} OUT_{i} \rightarrow \sum_{i=1}^{k} IN_{i} + IN_{k+1} \leq \sum_{i=1}^{k} OUT_{i} + IN_{k+1} \leq \sum_{i=1}^{k} OUT_{i} + OUT_{k+1} \rightarrow \sum_{i=1}^{k+1} IN_{i}  \leq \sum_{i=1}^{k+1} OUT_{i} 
