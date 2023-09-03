@@ -2,7 +2,7 @@
 ## a) 
 Idea: Tomar k veces al máximo del conjunto. 
 
-Demostracion de que el algoritmo greedy es correcto: tengo que ver que la solución es válida (es un subconjunto de X de tamaño k) y óptimo (maximiza la suma). 
+Demostracion de que el algoritmo greedy es correcto: tengo que ver que la solución es válida (es un subconjunto de X de tamaño k) y óptima (maximiza la suma). 
 
 Primero veo que es válido: esto es trivial, ya que el algoritmo toma k elementos de X, entonces todos los elementos de la solución greedy son elementos del conjunto X, y tengo exactamente k elementos. 
 
