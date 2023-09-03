@@ -15,6 +15,8 @@ Llamamos OUT al subconjunto de S de h elementos que saco de S, y IN al subconjun
 Entonces, $$\sum_{i=1}^{k} S_{i} + \sum_{i=1}^{h} IN_{i} - \sum_{i=1}^{h} OUT_{i} \leq \sum_{i=1}^{k} S_{i}$$
 Así, queda demostrado que no hay un subconjunto de X de k elementos cuyos elementos sumados sumen más que los elementos de la solución greedy sumados, ya que si reemplazo 1 o mas elementos, la suma es menor. 
 
+------
+
 Demostración que faltaba, sabiendo que todos los elementos de IN son menores iguales a todos los de OUT: 
 
 Por inducción: 
