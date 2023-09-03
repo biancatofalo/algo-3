@@ -34,4 +34,4 @@ $$\sum_{i=1}^{k} IN_{i} \leq \sum_{i=1}^{k} OUT_{i} \rightarrow \sum_{i=1}^{k} I
 Ordeno el arreglo de elementos con merge sort. 
 
 ## c) 
-Armo un minHeap de los primeros k elementos (O(klogk)). El resto los recorro con un ciclo y los voy comparando con el proximo del heap. Si son mayores, los swapeo y hago heapify (O(n*logk))
+Armo un minHeap de los primeros k elementos (O(klogk)). El resto los recorro con un ciclo y los voy comparando con el proximo del heap. Si son mayores, los swapeo y hago heapify (O(nlogk))
