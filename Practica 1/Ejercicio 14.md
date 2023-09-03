@@ -11,7 +11,7 @@ Ahora veo que es óptimo, o sea, que no hay un subconjunto de X de k elementos c
 Tengo la solución del algoritmo greedy $S_1 = \{S_{1_1}, \ldots, S_{1_k}\} \subset X$.
 
 Supongo que existe una solución $S_2 = \{S_{2_1}, \ldots, S_{2_k}\} \subset X$ tal que $$\sum_{i=1}^{k} S_{1_i} < \sum_{i=1}^{k} S_{2_i}$$
-Esto implica (ver demostración abajo) que existe $S_{2_i}$ con $1 \leq i \leq k$ tal que $S_{2_i} < S_{1_j}$ con $1 \leq j \leq k$. Sin embargo, por cómo está construida la solución greedy, no existe $S_{2_i}$ que cumpla eso, ya que $S_{2_i} \in X$, y todo elemento en $S_1$ es mayor o igual a cualquier elemento en $X$. Entonces, no existe una solución $S_2 = \{S_{2_1}, \ldots, S_{2_k}\} \subset X$ tal que $$\sum_{i=1}^{k} S_{1_i} < \sum_{i=1}^{k} S_{2_i}$$.
+Esto implica (ver demostración abajo) que existe $S_{2_i}$ con $1 \leq i \leq k$ tal que $S_{2_i} > S_{1_j}$ con $1 \leq j \leq k$. Sin embargo, por cómo está construida la solución greedy, no existe $S_{2_i}$ que cumpla eso, ya que $S_{2_i} \in X$, y todo elemento en $S_1$ es mayor o igual a cualquier elemento en $X$. Entonces, no existe una solución $S_2 = \{S_{2_1}, \ldots, S_{2_k}\} \subset X$ tal que $$\sum_{i=1}^{k} S_{1_i} < \sum_{i=1}^{k} S_{2_i}$$.
 
 Demostración que falta:
 $P(k) =$ $$\sum_{i=1}^{k} S_{1_i} < \sum_{i=1}^{k} S_{2_i}$$ $\rightarrow \exists  S_{2_i}$ con $1 \leq i \leq k$ tal que $S_{2_i} < S_{1_j}$ con $1 \leq j \leq k$ para todo $k \in \mathbb{N}$.
