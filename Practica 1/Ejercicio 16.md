@@ -14,7 +14,7 @@ greedy).
 * No existen soluciones con menos paradas:
 
 Tengo mi solución greedy, $g$, que frena en $g_1, ..., g_r$, y otra solución $b$, que frena en $b_1, ..., b_r$, con r<s (o sea, hace menos paradas que la solución greedy). 
-Si existe $b$, $\exists$ un $i_0= \text {min {}{i/1 \leq i \leq n \land b_i > a_i} \text{}}$ (o sea, ${i_0}$ es la primera parada en la que $g$ carga y $b$ no). 
+Si existe $b$, $\exists$ un $i_0=$ min { $i : 1 \leq i \leq n \land b_i > a_i$ } (o sea, ${i_0}$ es la primera parada en la que $g$ carga y $b$ no). 
 Quiero ver que $b$ se queda sin nafta al no cargar en $g_{i_0}$. 
 
 Siempre hay una parada luego de $g_{i_0}$ ya que, como r<s, sea cual sea $i_0$, hay una parada luego de $g_{i_0}$ en la que $b$ frena. 
