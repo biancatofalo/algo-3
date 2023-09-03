@@ -8,31 +8,8 @@ Primero veo que es válido: esto es trivial, ya que el algoritmo toma k elemento
 
 Ahora veo que es óptimo, o sea, que no hay un subconjunto de X de k elementos cuyos elementos sumados sumen más que los elementos de la solución greedy sumados: 
 
-Tengo la solución del algoritmo greedy $S_1 = \{S_{1_1}, \ldots, S_{1_k}\} \subset X$.
+Tengo una solución greedy $S={S_1, ..., S_2} \subseteq X$. Quiero ver que si le saco h elementos a S y los reemplazo por h elementos (distintos a los que saco) de X, con $0 \leq h \leq k$ y $|S| + h \leq X$ (o sea, hay elementos suficientes que no esten en S para reemplazar a los que saco)  entonces la suma es menor. 
 
-Supongo que existe una solución $S_2 = \{S_{2_1}, \ldots, S_{2_k}\} \subset X$ tal que $$\sum_{i=1}^{k} S_{1_i} < \sum_{i=1}^{k} S_{2_i}$$
-Esto implica (ver demostración abajo) que existe $S_{2_i}$ con $1 \leq i \leq k$ tal que $S_{2_i} > S_{1_j}$ con $1 \leq j \leq k$. Sin embargo, por cómo está construida la solución greedy, no existe $S_{2_i}$ que cumpla eso, ya que $S_{2_i} \in X$, y todo elemento en $S_1$ es mayor o igual a cualquier elemento en $X$. Entonces, no existe una solución $S_2 = \{S_{2_1}, \ldots, S_{2_k}\} \subset X$ tal que $$\sum_{i=1}^{k} S_{1_i} < \sum_{i=1}^{k} S_{2_i}$$.
-
-Demostración que falta:
-$P(k) =$ $$\sum_{i=1}^{k} S_{1_i} < \sum_{i=1}^{k} S_{2_i}$$ $\rightarrow \exists  S_{2_i}$ con $1 \leq i \leq k$ tal que $S_{2_i} < S_{1_j}$ con $1 \leq j \leq k$ para todo $k \in \mathbb{N}$.
-
-Probamos $P(k)$ con inducción en $k$:
-
-Caso base: P(1)
-
-Si $k=1$ es verdadero, porque $X_{1} < Y_{1} \rightarrow X_{1} < Y_{1}$.
-
-Paso inductivo: $P(k) \rightarrow P(k+1)$
-HI: $$\sum_{i=1}^{k} S_{1_i} < \sum_{i=1}^{k} S_{2_i}$$ $\rightarrow \exists S_{2_i}$ con $1 \leq i \leq k$ tal que $S_{2_i} < S_{1_j}$ con $1 \leq j \leq k$.
-
-Queremos probar que $$\sum_{i=1}^{k+1} S_{1_i} < \sum_{i=1}^{k+1} S_{2_i}$$ $\rightarrow \exists S_{2_i}$ con $1 \leq i \leq k+1$ tal que $S_{2_i} < S_{1_j}$ con $1 \leq j \leq k+1$.
-
-Si $$\sum_{i=1}^{k+1} S_{1_i} \geq \sum_{i=1}^{k+1} S_{2_i}$$, entonces $P(k+1)$ es trivialmente verdadero.
-
-Si $$\sum_{i=1}^{k+1} S_{1_i} < \sum_{i=1}^{k+1} S_{2_i}$$, tenemos dos casos posibles:
-
-1) $$\sum_{i=1}^{k} S_{1_i} < \sum_{i=1}^{k} S_{2_i}$$ $\rightarrow \exists S_{2_i}$ con $1 \leq i \leq k$ tal que $S_{2_i} < S_{1_j}$ con $1 \leq j \leq k \rightarrow \exists S_{2_i}$ con $1 \leq i \leq k+1$ tal que $S_{2_i} < S_{1_j}$ con $1 \leq j \leq k+1$.
-
-2) $$\sum_{i=1}^{k} S_{1_i} \geq \sum_{i=1}^{k} S_{2_i}$$. Además, sabemos que $$\sum_{i=1}^{k+1} S_{1_i} < \sum_{i=1}^{k+1} S_{2_i}$$ $\rightarrow$ $$\sum_{i=1}^{k} S_{1_i} + S_{1_{k+1}} < \sum_{i=1}^{k} S_{2_i} + S_{2_{k+1}}$$. Esto solo es posible si $S_{1_{k+1}} < S_{2_{k+1}} \rightarrow \exists S_{2_i}$ con $1 \leq i \leq k+1$ tal que $S_{2_i} < S_{1_j}$ con $1 \leq j \leq k+1$.
-
-  
+Llamamos OUT al subconjunto de S de h elementos que saco de S, y IN al subconjunto de X de h elementos que meto en S. Se que todos los elementos de IN son menores o iguales a todos los elementos de OUT (por como construí la solución greedy), entonces $$\sum_{i=1}^{h} IN_{i} \leq \sum_{i=1}^{h} OUT_{i}$$ (esto creo que debería demostrarlo por inducción). Esto implica que $\sum_{i=1}^{h} IN_{i} - \sum_{i=1}^{h} OUT_{i} \leq 0$$
+Entonces, $$\sum_{i=1}^{k} S_{i} + \sum_{i=1}^{h} IN_{i} - \sum_{i=1}^{h} OUT_{i} \leq \sum_{i=1}^{k} S_{i}$$
+Así, queda demostrado que no hay un subconjunto de X de k elementos cuyos elementos sumados sumen más que los elementos de la solución greedy sumados, ya que no podría reemplazar ni uno ni mas elementos de S de manera que la suma sea mayor. 
