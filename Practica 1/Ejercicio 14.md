@@ -29,3 +29,9 @@ $$\sum_{i=1}^{1} IN_{i} \leq \sum_{i=1}^{1} OUT_{i} \leftrightarrow IN_{1} \leq 
 Paso inductivo: quiero ver que si $$\sum_{i=1}^{k} IN_{i} \leq \sum_{i=1}^{k} OUT_{i} \rightarrow \sum_{i=1}^{k+1} IN_{i} \leq \sum_{i=1}^{k+1} OUT_{i}$$
 
 $$\sum_{i=1}^{k} IN_{i} \leq \sum_{i=1}^{k} OUT_{i} \rightarrow \sum_{i=1}^{k} IN_{i} + IN_{k+1} \leq \sum_{i=1}^{k} OUT_{i} + IN_{k+1} \leq \sum_{i=1}^{k} OUT_{i} + OUT_{k+1} \rightarrow \sum_{i=1}^{k+1} IN_{i}  \leq \sum_{i=1}^{k+1} OUT_{i}$$
+
+## b) 
+Ordeno el arreglo de elementos con merge sort. 
+
+## c) 
+Armo un minHeap de los primeros k elementos (O(klogk)). El resto los recorro con un ciclo y los voy comparando con el proximo del heap. Si son mayores, los swapeo y hago heapify (O(n*logk))
