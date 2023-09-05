@@ -17,6 +17,6 @@ Quiero ver que $ m = mex({{G_1,...,G_{k+1}}}) \geq mex({{Y_1,...,Y_{k+1}}})$
 Tengo 2 casos: 
 * $m = k+1$:
 Ademas sabemos que $mex({{Y_1,...,Y_{k+1}}}) \leq k+1$. Listo, queda probado.
-* $m<k+1$:
+* $m < k+1$:
 Como ${G_1,...,G_{k+1}}$ es un subconjunto de $X$, sabemos que $0...m-1 \in X$, y $m \notin X$ (ya que si m no está en los primeros k elementos, siendo menor o igua a k, no va a estar en los siguientes, ya que están en orden).
 Además, como $Y$ es una permutación de $X$, $m \notin Y \rightarrow m \notin {Y_1,...,Y_{k+1}} \rightarrow mex({{Y_1,...,Y_{k+1}}}) \leq m$
