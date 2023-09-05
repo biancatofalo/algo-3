@@ -12,7 +12,7 @@ $$\sum_{i=1}^{k} mex({{G_1,...,G_i}}) \geq \sum_{i=1}^{k} mex({{Y_1,...,Y_i}}) \
 $$\sum_{i=1}^{k+1} mex({{G_1,...,G_i}}) = (\sum_{i=1}^{k} mex({{G_1,...,G_i}})) + mex({{G_1,...,G_{k+1}}}) \geq_{HI} (\sum_{i=1}^{k} mex({{Y_1,...,Y_i}})) + mex({{G_1,...,G_{k+1}}}) \geq_{Demo2} (\sum_{i=1}^{k} mex({{Y_1,...,Y_i}})) + mex({{Y_1,...,Y_{k+1}}}) = \sum_{i=1}^{k+1} mex({{Y_1,...,Y_i}}) $$
 
 Demo2: 
-Quiero ver que $ m = mex({{G_1,...,G_{k+1}}}) \geq mex({{Y_1,...,Y_{k+1}}})$ 
+Quiero ver que $m = mex({{G_1,...,G_{k+1}}}) \geq mex({{Y_1,...,Y_{k+1}}})$ 
 
 Tengo 2 casos: 
 * $m = k+1$:
