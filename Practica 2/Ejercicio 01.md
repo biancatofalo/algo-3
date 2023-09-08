@@ -31,9 +31,13 @@ $$
 $$
 
 $$
-\sum_{i=1}^{n} d_{in_{D}}(V_{i}) = \sum_{i=1}^{j-1} d_{in_{D'}}(V_{i}) + d_{in_{D}} (V_{j}) + \sum_{i=j+1}^{n} d_{in_{D'}}(V_{i}) = \sum_{i=1}^{j-1} d_{in_{D'}}(V_{i}) + d_{in_{D'}} (V_{j}) + 1 + \sum_{i=j+1}^{n} d_{in_{D'}}(V_{i}) = \sum_{i=1}^{n} d_{in_{D'}}(V_{i}) + 1 = m' + 1 \rightarrow m'=m-1 
+\sum_{i=1}^{n} d_{in_{D}}(V_{i}) = \sum_{i=1}^{j-1} d_{in_{D'}}(V_{i}) + d_{in_{D}} (V_{j}) + \sum_{i=j+1}^{n} d_{in_{D'}}(V_{i}) = \sum_{i=1}^{j-1} d_{in_{D'}}(V_{i}) + d_{in_{D'}} (V_{j}) + 1 + \sum_{i=j+1}^{n} d_{in_{D'}}(V_{i}) = \sum_{i=1}^{n} d_{in_{D'}}(V_{i}) + 1 = m' + 1 
 $$
 
 $$
-\sum_{i=1}^{n} d_{out_{D}}(V_{i}) = \sum_{i=1}^{j-1} d_{out_{D'}}(V_{i}) + d_{out_{D}} (V_{h}) + \sum_{i=j+1}^{n} d_{out_{D'}}(V_{i}) = \sum_{i=1}^{j-1} d_{out_{D'}}(V_{i}) + d_{out_{D'}} (V_{h}) + 1 + \sum_{i=j+1}^{n} d_{out_{D'}}(V_{i}) = \sum_{i=1}^{n} d_{out_{D'}}(V_{i}) + 1 = m' + 1 \rightarrow m'=m-1 
+\sum_{i=1}^{n} d_{out_{D}}(V_{i}) = \sum_{i=1}^{j-1} d_{out_{D'}}(V_{i}) + d_{out_{D}} (V_{h}) + \sum_{i=j+1}^{n} d_{out_{D'}}(V_{i}) = \sum_{i=1}^{j-1} d_{out_{D'}}(V_{i}) + d_{out_{D'}} (V_{h}) + 1 + \sum_{i=j+1}^{n} d_{out_{D'}}(V_{i}) = \sum_{i=1}^{n} d_{out_{D'}}(V_{i}) + 1 = m' + 1 
+$$
+
+$$ 
+\text {Entonces, } \sum_{i=1}^{n} d_{in_{D}}(V_{i}) = \sum_{i=1}^{n} d_{out_{D}}(V_{i}) = m' + 1 = m = |E|
 $$
