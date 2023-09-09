@@ -77,7 +77,7 @@ int max_ganancia(vector<int>& precios, int a, int b, int dias) {
     while (j < dias) {
         int i = 0;
         while (i < dias) {
-            //Casos base
+            //Casos base : completo la columna j=0 (o completo con -infinito si ya se q da eso)
             if (j + 1 < i) {
                 memo[i][j] = -infinito;
             } else if (j == 0) {
