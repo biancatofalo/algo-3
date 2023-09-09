@@ -13,6 +13,8 @@ $$
 
 El llamado que resuelve el problema es f(sumaSoportes, 0) 
 
+Creo q en vez de suma soportes podria hacer sumasoportes+sumapesos para asegurarme de q no falla el caso en q todavia no puse ninguna caja
+
 
 ## c) 
 ```cpp
