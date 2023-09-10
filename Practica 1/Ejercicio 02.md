@@ -308,7 +308,10 @@ Esto se podría aprovechar verificando cada vez que completo una fila/columna si
 
 ## Preguntas 
 En casos como este, se puede podar por optimalidad? Si, debería ser algo como ya se que por este camino no supero al actual. 
+
 El arbol de backtracking incluye los casos que voy descartando? 
+
 c) Formalmente
+
 La complejidad es #nodos o #hojas * costo de casos base o nodo interno? 
 
