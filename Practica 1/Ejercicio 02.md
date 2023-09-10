@@ -99,7 +99,7 @@ costo de cada nodo = $n^2$ de chequear si es mágico, y $n^2$ si no es el caso b
 Entonces la complejidad temporal es $O((n^2)!n^2)$
 
 ## c) 
-Intuitivamente, la primera posición tiene $n^2$ opciones, la segunda $n^2-1$, ..., la n-esima 1 opcion $\rightarrow O(n^2(n^2-1)...1)=O((n^2)!)$
+La cantidad de nodos del arbol de backtracking va a ser todas las maneras posibles de ordenar $n^2$ elementos, y esto sabemos que es $(n^2)!$ (se puede probar con inducción). 
 
 ## d) 
 Idea: Tengo un parámetro que es un vector N, el cual indica en la posición i la suma de la fila i, y otro que indica en la posición j la suma de la columna j. 
@@ -309,9 +309,7 @@ Esto se podría aprovechar verificando cada vez que completo una fila/columna si
 ## Preguntas 
 En casos como este, se puede podar por optimalidad? Si, debería ser algo como ya se que por este camino no supero al actual. 
 
-El arbol de backtracking incluye los casos que voy descartando? 
-
-c) Formalmente
+El arbol de backtracking incluye los casos que voy descartando? Creo que no 
 
 La complejidad es #nodos o #hojas * costo de casos base o nodo interno? 
 
