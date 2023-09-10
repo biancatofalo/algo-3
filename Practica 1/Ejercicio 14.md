@@ -31,7 +31,16 @@ Paso inductivo: quiero ver que si $$\sum_{i=1}^{k} IN_{i} \leq \sum_{i=1}^{k} OU
 $$\sum_{i=1}^{k} IN_{i} \leq \sum_{i=1}^{k} OUT_{i} \rightarrow \sum_{i=1}^{k} IN_{i} + IN_{k+1} \leq \sum_{i=1}^{k} OUT_{i} + IN_{k+1} \leq \sum_{i=1}^{k} OUT_{i} + OUT_{k+1} \rightarrow \sum_{i=1}^{k+1} IN_{i}  \leq \sum_{i=1}^{k+1} OUT_{i}$$
 
 ## b) 
+
+
 Ordeno el arreglo de elementos con merge sort. 
 
 ## c) 
 Armo un minHeap de los primeros k elementos (O(klogk)). El resto los recorro con un ciclo y los voy comparando con el proximo del heap. Si son mayores, los swapeo y hago heapify (O(nlogk))
+
+
+------------
+Otra demo posible es demostrar que dados los num del input ordenados x1>=x2...>=xn cualquier subconjunto de indices tiene suma menor o igual a la propuesta por greedy. 
+Asumaos que estos otros indices estan ordenados de menor a mayor. 
+Luego la suma de los indices greedy - la suma de estos indices = (xg1- xo1) + (xg2 - xo2) + ... + (xgn-xon) 
+se puede ver (usando x ej induccion) que oi>=gi y sabemos que los x del input estan ordenados de mayor a menor entonces xoi < xgi y xgi - xoi >0. Luego todas las diferencias son positivas y queda demostrado el teorema :)
