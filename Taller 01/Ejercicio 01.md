@@ -48,3 +48,4 @@ int main () {
 }
 ```
 Demostración: tomar una solucion q no tome los 3 mas caros y mostrar que si lo hiciera tendria mayor descuento. 
+Si tengo p1 p2 p3 p4 p5 ... y p1p2p3 son los mas grandes, se que en cualq otra solucion agrego uno de los q quedan en vez de p3 x ejemplo, y entonces t regalan ese --> el ahorro es menor. 
