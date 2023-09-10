@@ -5,9 +5,9 @@ C = {1,2,2,3,4}
 
 ## d) 
 ### Complejidad temporal: 
-#Estados = O(nk) 
-Si $k<<2^n$, nk<<
-nk<<2^n <--> k << 2^n/n
+#Estados = O(nk)
+
+Si $k<<2^n, nk$ << $nk$ << $2^n \leftrightarrow \ n$
 
 
 
