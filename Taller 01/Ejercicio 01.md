@@ -47,4 +47,4 @@ int main () {
     return 0;
 }
 ```
-Demostración: 
+Demostración: tomar una solucion q no tome los 3 mas caros y mostrar que si lo hiciera tendria mayor descuento. 
